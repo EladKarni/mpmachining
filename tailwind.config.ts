@@ -15,9 +15,9 @@ const config: Config = {
       "dim",
       {
         mytheme: {
-          primary: "#ea00ff",
+          primary: "#3871C1",
           "primary-content": "#130016",
-          secondary: "#00a2ff",
+          secondary: "#C18838",
           "secondary-content": "#000a16",
           accent: "#ff0000",
           "accent-content": "#160000",

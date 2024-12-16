@@ -1,3 +1,4 @@
+import HeroSection from "@/views/hero";
 import { faqType } from "@/types/faqType";
 import FAQSection from "@/views/faq";
 
@@ -21,7 +22,7 @@ export default async function Home() {
 
   return (
     <main className="text-center max-w-[1100px] m-4 xl:mx-auto">
-      <FAQSection faqItems={faqItems} />
+      <HeroSection />
     </main>
   );
 }
