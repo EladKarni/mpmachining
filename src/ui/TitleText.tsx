@@ -10,10 +10,7 @@ const TitleText = ({ children, DarkMode, sectionClasses }: TitleTextProps) => {
   return (
     <h2
       className={cn(
-        "text-4xl sm:text-4xl text-base-300",
-        {
-          "text-base-100": DarkMode,
-        },
+        "text-4xl sm:text-4xl font-extrabold text-primary-content/100",
         sectionClasses
       )}
     >

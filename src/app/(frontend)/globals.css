@@ -10,7 +10,7 @@
   transition: grid-template-rows var(--transitionLength) var(--transitionTiming);
 }
 
-.accordion-trigger-input:checked~.accordion-animation-wrapper {
+.accordion-trigger-input:checked ~ .accordion-animation-wrapper {
   grid-template-rows: 1fr;
 }
 
@@ -21,13 +21,19 @@
 .accordion-transform-wrapper {
   transform: translateY(-100%);
   visibility: hidden;
-  transition: transform var(--transitionLength) var(--transitionTiming), visibility 0s var(--transitionLength) var(--transitionTiming);
+  transition:
+    transform var(--transitionLength) var(--transitionTiming),
+    visibility 0s var(--transitionLength) var(--transitionTiming);
 }
 
-.accordion-trigger-input:checked~.accordion-animation-wrapper .accordion-transform-wrapper {
+.accordion-trigger-input:checked
+  ~ .accordion-animation-wrapper
+  .accordion-transform-wrapper {
   transform: translateY(0);
   visibility: visible;
-  transition: transform var(--transitionLength) var(--transitionTiming), visibility 0s linear;
+  transition:
+    transform var(--transitionLength) var(--transitionTiming),
+    visibility 0s linear;
 }
 
 .accordion {
@@ -51,7 +57,6 @@
   width: 1px;
 }
 
-
 .accordion-trigger {
   display: block;
   position: relative;
@@ -61,7 +66,7 @@
   cursor: pointer;
 }
 
-.accordion-trigger-input:focus-visible~.accordion-trigger {
+.accordion-trigger-input:focus-visible ~ .accordion-trigger {
   outline: 2px solid;
   outline-offset: -2px;
 }
@@ -71,7 +76,7 @@
   position: absolute;
   right: 22px;
   top: 22px;
-  content: '';
+  content: "";
   width: 8px;
   height: 8px;
   border: 2px solid #676767;
@@ -81,12 +86,14 @@
   transition: transform var(--transitionLength) var(--transitionTiming);
 }
 
-.accordion-trigger-input:checked~.accordion-trigger::after {
+.accordion-trigger-input:checked ~ .accordion-trigger::after {
   border: transparent;
-  transform: rotate(135deg) rotateX(180deg) rotateY(180deg) translateY(4px) translateX(-4px);
+  transform: rotate(135deg) rotateX(180deg) rotateY(180deg) translateY(4px)
+    translateX(-4px);
 }
 
-.accordion-trigger-input:checked~.accordion-trigger {
+.accordion-trigger-input:checked ~ .accordion-trigger {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  transition: box-shadow calc(var(--transitionLength) / 4) var(--transitionTiming);
+  transition: box-shadow calc(var(--transitionLength) / 4)
+    var(--transitionTiming);
 }

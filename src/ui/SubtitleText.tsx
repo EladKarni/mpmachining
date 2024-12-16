@@ -14,10 +14,7 @@ const SubtitleText = ({
   return (
     <h2
       className={cn(
-        "text-2xl sm:text-xl text-primary-content/80",
-        {
-          "text-base-200": DarkMode,
-        },
+        "text-3xl sm:text-xl font-bold text-primary-content/100",
         sectionClasses
       )}
     >

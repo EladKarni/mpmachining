@@ -1,6 +1,7 @@
 import HeroSection from "@/views/hero";
 import { faqType } from "@/types/faqType";
 import FAQSection from "@/views/faq";
+import AboutSection from "@/views/about";
 
 type PostType = {
   userId: number;
@@ -21,8 +22,9 @@ export default async function Home() {
   }));
 
   return (
-    <main className="text-center max-w-[1100px] m-4 xl:mx-auto">
+    <main className="flex flex-col gap-y-10 text-center max-w-[1100px] m-4 xl:mx-auto">
       <HeroSection />
+      <AboutSection />
     </main>
   );
 }

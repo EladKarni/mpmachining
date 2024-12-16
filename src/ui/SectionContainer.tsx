@@ -19,7 +19,7 @@ const SectionContainer = ({
     <section
       id={sectionName}
       className={cn(
-        "w-full px-4 lg:px-0 lg:max-w-5xl scroll-mt-36",
+        "w-full px-4 lg:max-w-5xl scroll-mt-36",
         {
           "lg:max-w-full mx-auto": isFullWidth,
         },

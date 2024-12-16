@@ -1,18 +1,18 @@
 export const navLinkList = [
   {
-    label: "Home",
-    style: "default",
-    url: "/",
-  },
-  {
     label: "About",
     style: "default",
     url: "#about",
   },
   {
-    label: "Solutions",
+    label: "Our Founder",
     style: "default",
-    url: "#solutions",
+    url: "#founder",
+  },
+  {
+    label: "Features",
+    style: "default",
+    url: "#features",
   },
   {
     label: "Contact",
