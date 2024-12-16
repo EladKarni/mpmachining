@@ -3,6 +3,7 @@ import { faqType } from "@/types/faqType";
 import FAQSection from "@/views/faq";
 import AboutSection from "@/views/about";
 import FounderSection from "@/views/founder";
+import FeaturesSection from "@/views/features";
 
 type PostType = {
   userId: number;
@@ -27,6 +28,7 @@ export default async function Home() {
       <HeroSection />
       <AboutSection />
       <FounderSection />
+      <FeaturesSection />
     </main>
   );
 }
