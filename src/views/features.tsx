@@ -18,37 +18,40 @@ const FeaturesSection = () => {
       </div>
       <div className="flex flex-col sm:flex-row items-center gap-4">
         <div className="flex flex-col gap-4 w-full sm:w-1/3">
-          <div className="w-full max-h-32">
-            <Image
-              src="/img/mothman.png"
-              alt="A placeholder image."
-              width={360}
-              height={480}
-              className="relative aspect-auto object-contain"
-            />
+          <Image
+            src="/img/mothman.png"
+            alt="A placeholder image."
+            width={360}
+            height={480}
+            className="relative aspect-auto object-contain"
+          />
+          <div>
+            <h4 className="text-md font-semibold text-primary-content/100">
+              Lorem ipsum dolor sin amet
+            </h4>
+            <p className="text-sm text-primary-content/70">
+              Lorem ipsum dolor sit amet consectetur. Tristique etiam massa
+              facilisis viverra est amet adipiscing. Amet a pharetra sit.
+            </p>
           </div>
         </div>
         <div className="flex flex-col gap-4 w-full sm:w-1/3">
-          <div className="w-full max-h-32">
-            <Image
-              src="/img/slendy.png"
-              alt="A placeholder image."
-              width={360}
-              height={480}
-              className="relative aspect-auto object-contain"
-            />
-          </div>
+          <Image
+            src="/img/mothman.png"
+            alt="A placeholder image."
+            width={360}
+            height={480}
+            className="relative aspect-auto object-contain"
+          />
         </div>
         <div className="flex flex-col gap-4 w-full sm:w-1/3">
-          <div className="w-full max-h-32">
-            <Image
-              src="/img/nessie.png"
-              alt="A placeholder image."
-              width={360}
-              height={480}
-              className="relative aspect-auto object-contain"
-            />
-          </div>
+          <Image
+            src="/img/mothman.png"
+            alt="A placeholder image."
+            width={360}
+            height={480}
+            className="relative aspect-auto object-contain"
+          />
         </div>
       </div>
     </SectionContainer>
