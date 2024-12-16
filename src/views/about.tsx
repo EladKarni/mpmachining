@@ -6,9 +6,9 @@ const AboutSection = () => {
   return (
     <SectionContainer
       sectionName="about"
-      sectionClasses="flex flex-col align-middle text-left"
+      sectionClasses="flex flex-col text-left"
     >
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col">
         <SubtitleText>
           Lorem ipsum dolor sit amet consectetur. Blandit tristique.
         </SubtitleText>
