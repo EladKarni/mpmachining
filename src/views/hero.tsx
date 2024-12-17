@@ -3,8 +3,11 @@ import Image from "next/image";
 import Button from "@/ui/button";
 import SectionContainer from "@/ui/SectionContainer";
 import TitleText from "@/ui/TitleText";
+import { getGlobalData } from "@/util/getAboutData";
 
-const HeroSection = () => {
+const HeroSection = async () => {
+  const { title, content, leftButtonText, rightButtonText, heroImage } =
+    await getGlobalData("hero");
   return (
     <SectionContainer
       sectionName="hero"
@@ -12,28 +15,24 @@ const HeroSection = () => {
     >
       <div className="flex flex-col sm:flex-row items-center gap-4">
         <div className="flex flex-col gap-4">
-          <TitleText>Lorem ipsum dolor sit amet consectetur. Ut.</TitleText>
-          <p className="text-sm text-primary-content/70">
-            Lorem ipsum dolor sit amet consectetur. Tincidunt netus nullam sed
-            curabitur scelerisque aliquet. Feugiat pulvinar morbi sed amet.
-            Sagittis eu orci fringilla sit eget rutrum.
-          </p>
+          <TitleText>{title}</TitleText>
+          <p className="text-sm text-primary-content/70">{content}</p>
           <div className="space-x-4">
             <button className="btn btn-primary hover:btn-primary-700">
-              Contact Us
+              {leftButtonText}
             </button>
             <button className="btn btn-secondary hover:btn-primary-700">
-              Learn More
+              {rightButtonText}
             </button>
           </div>
         </div>
-        <div className="w-full aspect-square">
+        <div className="w-full aspect-square flex justify-center">
           <Image
-            src="/img/dummypic.jpg"
-            alt="A placeholder image."
+            src={heroImage.url as string}
+            alt={heroImage.alt as string}
             width={500}
             height={500}
-            className="relative aspect-auto"
+            className="relative aspect-auto object-contain"
           />
         </div>
       </div>

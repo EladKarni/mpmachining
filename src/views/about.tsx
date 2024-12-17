@@ -1,8 +1,7 @@
 import SectionContainer from "@/ui/SectionContainer";
 import SubtitleText from "@/ui/SubtitleText";
-import { FC } from "react";
 
-const AboutSection = () => {
+const AboutSection = async () => {
   return (
     <SectionContainer
       sectionName="about"
