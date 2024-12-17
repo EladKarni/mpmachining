@@ -11,7 +11,7 @@ const MailIcon = () => {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M1.5 5.25L2.25 4.5H21.75L22.5 5.25V18.75L21.75 19.5H2.25L1.5 18.75V5.25ZM3 6.8025V18H21V6.804L12.465 13.35H11.55L3 6.8025ZM19.545 6H4.455L12 11.8035L19.545 6Z"
-          fill="black"
+          fill="white"
         />
       </svg>
     );

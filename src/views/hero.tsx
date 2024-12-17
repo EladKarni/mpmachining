@@ -1,13 +1,15 @@
-import { FC, ReactNode } from "react";
 import Image from "next/image";
-import Button from "@/ui/button";
 import SectionContainer from "@/ui/SectionContainer";
 import TitleText from "@/ui/TitleText";
-import { getGlobalData } from "@/util/getAboutData";
+import { getHeroData } from "@/util/getHeroData";
+import { Media } from "@/payload-types";
+import { imageData } from "@/types/payloadTypes";
 
 const HeroSection = async () => {
   const { title, content, leftButtonText, rightButtonText, heroImage } =
-    await getGlobalData("hero");
+    await getHeroData();
+
+  const image = heroImage as imageData;
   return (
     <SectionContainer
       sectionName="hero"
@@ -28,8 +30,8 @@ const HeroSection = async () => {
         </div>
         <div className="w-full aspect-square flex justify-center">
           <Image
-            src={heroImage.url as string}
-            alt={heroImage.alt as string}
+            src={image.url}
+            alt={image.alt}
             width={500}
             height={500}
             className="relative aspect-auto object-contain"

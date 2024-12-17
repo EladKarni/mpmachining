@@ -1,7 +1,7 @@
 import type { GlobalConfig } from 'payload'
 
-export const About: GlobalConfig = {
-  slug: "about",
+export const Founder: GlobalConfig = {
+  slug: "founder",
   access: {
     read: () => true,
   },
@@ -14,6 +14,12 @@ export const About: GlobalConfig = {
     {
       name: "content",
       type: "text",
+      required: true,
+    },
+    {
+      name: "ownerImage", // required
+      type: "upload", // required
+      relationTo: "media", // required
       required: true,
     },
   ],

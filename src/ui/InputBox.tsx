@@ -1,14 +1,19 @@
-import React from "react";
-
 type InputBoxProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   id: string;
   field: string;
   placeholder: string;
   inputType: "text" | "email" | "tel";
+  isRequired?: boolean;
 };
 
-const InputBox = ({ children, id, field, placeholder }: InputBoxProps) => {
+const InputBox = ({
+  children,
+  id,
+  isRequired = false,
+  field,
+  placeholder,
+}: InputBoxProps) => {
   return (
     <label
       className="input input-bordered flex items-center gap-2 focus-within:border-primary"
@@ -16,7 +21,7 @@ const InputBox = ({ children, id, field, placeholder }: InputBoxProps) => {
     >
       {children}
       <input
-        required
+        required={isRequired}
         type="text"
         className="grow border-none outline-none"
         placeholder={placeholder}

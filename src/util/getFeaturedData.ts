@@ -1,10 +1,10 @@
 import { getPayload } from "payload";
 import config from "@payload-config";
 
-export const getAboutData = async () => {
+export const getFeaturedData = async () => {
   const payload = await getPayload({ config });
   const globalData = await payload.findGlobal({
-    slug: "about",
+    slug: "features",
   });
   return globalData;
 };

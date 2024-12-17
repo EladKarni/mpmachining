@@ -29,12 +29,16 @@ export interface Config {
     defaultIDType: number;
   };
   globals: {
-    about: About;
+    founder: Founder;
     hero: Hero;
+    features: Feature;
+    about: About;
   };
   globalsSelect: {
-    about: AboutSelect<false> | AboutSelect<true>;
+    founder: FounderSelect<false> | FounderSelect<true>;
     hero: HeroSelect<false> | HeroSelect<true>;
+    features: FeaturesSelect<false> | FeaturesSelect<true>;
+    about: AboutSelect<false> | AboutSelect<true>;
   };
   locale: null;
   user: User & {
@@ -223,9 +227,9 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "about".
+ * via the `definition` "founder".
  */
-export interface About {
+export interface Founder {
   id: number;
   title: string;
   content: string;
@@ -249,9 +253,36 @@ export interface Hero {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "about_select".
+ * via the `definition` "features".
  */
-export interface AboutSelect<T extends boolean = true> {
+export interface Feature {
+  id: number;
+  title: string;
+  features: {
+    title: string;
+    description: string;
+    featuredImage: number | Media;
+    id?: string | null;
+  }[];
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "about".
+ */
+export interface About {
+  id: number;
+  title: string;
+  content: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "founder_select".
+ */
+export interface FounderSelect<T extends boolean = true> {
   title?: T;
   content?: T;
   ownerImage?: T;
@@ -269,6 +300,35 @@ export interface HeroSelect<T extends boolean = true> {
   leftButtonText?: T;
   rightButtonText?: T;
   heroImage?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "features_select".
+ */
+export interface FeaturesSelect<T extends boolean = true> {
+  title?: T;
+  features?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        featuredImage?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "about_select".
+ */
+export interface AboutSelect<T extends boolean = true> {
+  title?: T;
+  content?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

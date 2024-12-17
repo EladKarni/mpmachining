@@ -7,13 +7,16 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
-import { Users } from './collections/Users'
-import { Media } from './collections/Media'
-import { About } from './globals/About'
-import { Hero } from './globals/hero'
+import { Founder } from "./globals/Founder";
+import { Hero } from "./globals/hero";
+import { About } from "./globals/About";
+import { Featured } from "./globals/Featured";
 
-const filename = fileURLToPath(import.meta.url)
-const dirname = path.dirname(filename)
+import { Users } from "./collections/Users";
+import { Media } from "./collections/Media";
+
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
 
 export default buildConfig({
   admin: {
@@ -23,15 +26,15 @@ export default buildConfig({
     },
   },
   collections: [Users, Media],
-  globals: [About, Hero],
+  globals: [Founder, Hero, Featured, About],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || '',
+  secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
-    outputFile: path.resolve(dirname, 'payload-types.ts'),
+    outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   db: sqliteAdapter({
     client: {
-      url: process.env.DATABASE_URI || '',
+      url: process.env.DATABASE_URI || "",
     },
   }),
   sharp,
@@ -39,4 +42,4 @@ export default buildConfig({
     payloadCloudPlugin(),
     // storage-adapter-placeholder
   ],
-})
+});
