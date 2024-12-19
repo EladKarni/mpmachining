@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export function metadataConstructor({
   title = "Micro Precision Machining ",
   description = "Text needed for description of website. This is what is going to show up when you share the website on social media or it is a result on search engines like Google.",
-  image = "/images/url-preview-image.jpg",
+  image = "/images/machine-tool-operating.png",
   icons = "/favicon.ico",
   noIndex = false,
   customMetadata = {},
