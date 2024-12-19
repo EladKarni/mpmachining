@@ -1,9 +1,8 @@
-import Image from "next/image";
 import SectionContainer from "@/ui/SectionContainer";
-import SubtitleText from "@/ui/SubtitleText";
 import { getFeaturedData } from "@/util/getFeaturedData";
 import Featureditem from "@/components/featuredItem";
 import { imageData } from "@/types/payloadTypes";
+import TitleText from "@/ui/TitleText";
 
 const FeaturesSection = async () => {
   const { title, features } = await getFeaturedData();
@@ -13,10 +12,10 @@ const FeaturesSection = async () => {
       sectionName="features"
       sectionClasses="flex flex-col text-left w-full"
     >
-      <div className="text-center gap-2 mb-2">
-        <SubtitleText>{title}</SubtitleText>
+      <div className="text-center pb-12">
+        <TitleText>{title}</TitleText>
       </div>
-      <div className="flex flex-col sm:flex-row items-center gap-4">
+      <div className="flex flex-col sm:flex-row items-center gap-6 flex-wrap justify-between">
         {features.map((feature) => (
           <Featureditem
             key={feature.id}

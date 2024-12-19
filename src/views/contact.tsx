@@ -2,7 +2,6 @@
 
 import MailIcon from "@/ui/icons/mail";
 import PersonIcon from "@/ui/icons/person";
-import PhoneIcon from "@/ui/icons/phone";
 import InputBox from "@/ui/InputBox";
 import SectionContainer from "@/ui/SectionContainer";
 import SubtitleText from "@/ui/SubtitleText";
@@ -30,14 +29,14 @@ const ContactSection = () => {
 
   return (
     <SectionContainer
-      sectionClasses="text-center py-6 relative"
+      sectionClasses="text-center pb-6 relative"
       innerContainerClasses="flex flex-col gap-8"
       sectionName="contact"
       isFullWidth
     >
       <div className="flex flex-col gap-4">
-        <TitleText DarkMode>Contact Us</TitleText>
-        <SubtitleText DarkMode>
+        <TitleText>Contact Us</TitleText>
+        <SubtitleText>
           Got a technical issue? Want to send feedback about a beta feature?
           Need details about our Business plan? Let us know.
         </SubtitleText>

@@ -5,7 +5,7 @@ const MobileNavMenu = () => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
 
   return (
-    <div className="lg:hidden">
+    <div className="md:hidden">
       <button
         className="align-middle"
         onClick={() => setIsOpenMobileMenu(true)}

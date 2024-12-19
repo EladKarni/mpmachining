@@ -14,13 +14,13 @@ const Featureditem: React.FC<FeaturedItemProps> = ({
   content,
 }) => {
   return (
-    <div className="flex flex-col gap-4 w-full sm:w-1/3">
+    <div className="flex flex-col gap-4 flex-1 min-w-56">
       <Image
         src={imageData.url as string}
         alt={imageData.alt as string}
         width={360}
         height={480}
-        className="relative aspect-auto object-contain"
+        className="relative aspect-auto object-contain w-full h-auto"
       />
       <div>
         <h4 className="text-md font-semibold text-primary-content/100">

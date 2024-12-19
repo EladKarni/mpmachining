@@ -4,6 +4,7 @@ import TitleText from "@/ui/TitleText";
 import { getHeroData } from "@/util/getHeroData";
 import { Media } from "@/payload-types";
 import { imageData } from "@/types/payloadTypes";
+import Link from "next/link";
 
 const HeroSection = async () => {
   const { title, content, leftButtonText, rightButtonText, heroImage } =
@@ -15,26 +16,32 @@ const HeroSection = async () => {
       sectionName="hero"
       sectionClasses="flex flex-col text-left"
     >
-      <div className="flex flex-col sm:flex-row items-center gap-4">
+      <div className="flex flex-col-reverse sm:flex-row items-center gap-4">
         <div className="flex flex-col gap-4">
           <TitleText>{title}</TitleText>
           <p className="text-sm text-primary-content/70">{content}</p>
           <div className="space-x-4">
-            <button className="btn btn-primary hover:btn-primary-700">
+            <Link
+              className="btn btn-primary hover:btn-primary-700"
+              href={"#contact"}
+            >
               {leftButtonText}
-            </button>
-            <button className="btn btn-secondary hover:btn-primary-700">
+            </Link>
+            <Link
+              className="btn btn-secondary hover:btn-primary-700"
+              href={"#about"}
+            >
               {rightButtonText}
-            </button>
+            </Link>
           </div>
         </div>
-        <div className="w-full aspect-square flex justify-center">
+        <div className="w-full flex justify-center">
           <Image
             src={image.url}
             alt={image.alt}
             width={500}
             height={500}
-            className="relative aspect-auto object-contain"
+            className="relative aspect-auto object-contain w-full h-auto"
           />
         </div>
       </div>

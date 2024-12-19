@@ -6,7 +6,7 @@ import ContactSection from "@/views/contact";
 
 export default async function Home() {
   return (
-    <main className="flex flex-col gap-y-16 justify-center max-w-4xl m-4 md:mx-auto">
+    <main className="flex flex-col gap-y-16 justify-center max-w-3xl m-4 md:mx-auto">
       <HeroSection />
       <AboutSection />
       <FounderSection />

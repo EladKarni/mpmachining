@@ -19,16 +19,14 @@ const SectionContainer = ({
     <section
       id={sectionName}
       className={cn(
-        "w-full px-4 lg:max-w-5xl scroll-mt-36",
+        "w-full px-4 lg:max-w-3xl scroll-mt-36",
         {
           "lg:max-w-full mx-auto": isFullWidth,
         },
         sectionClasses
       )}
     >
-      <div className={cn("max-w-5xl mx-auto", innerContainerClasses)}>
-        {children}
-      </div>
+      <div className={cn(innerContainerClasses)}>{children}</div>
     </section>
   );
 };
