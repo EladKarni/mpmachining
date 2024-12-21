@@ -7,11 +7,12 @@ import ContactSection from "@/views/contact";
 export default async function Home() {
   return (
     <main className="flex flex-col gap-y-16 justify-center max-w-3xl m-4 md:mx-auto">
-      <HeroSection />
+      {/* <HeroSection />
       <AboutSection />
       <FounderSection />
       <FeaturesSection />
-      <ContactSection />
+      <ContactSection /> */}
+      <h1>Home Page</h1>
     </main>
   );
 }

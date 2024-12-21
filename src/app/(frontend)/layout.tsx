@@ -6,7 +6,6 @@ import Navbar from "@/components/navbar";
 import NavLinks from "@/components/NavLinks";
 import { metadataConstructor } from "@/util/metadataConstructor";
 import "./globals.css";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
