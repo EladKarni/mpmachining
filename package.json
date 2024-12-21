@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "^3.4.0",
+    "@payloadcms/db-vercel-postgres": "^3.11.0",
     "@payloadcms/next": "^3.4.0",
     "@payloadcms/payload-cloud": "^3.4.0",
     "@payloadcms/richtext-lexical": "^3.4.0",
