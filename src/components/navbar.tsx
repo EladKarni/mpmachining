@@ -28,7 +28,7 @@ const NavBar: FC<NavBarProps> = ({ children }) => {
             href="/"
           >
             <Logo />
-            <div className="max-sm:hidden">Micro Precision Machining</div>
+            <div className="max-sm:hidden">Micro Precision Machining, Inc.</div>
           </Link>
           {children}
           <MobileNavMenu />

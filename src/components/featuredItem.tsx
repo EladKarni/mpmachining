@@ -1,6 +1,5 @@
 import { imageData } from "@/types/payloadTypes";
 import Image from "next/image";
-import React from "react";
 
 interface FeaturedItemProps {
   imageData: imageData;
@@ -14,7 +13,7 @@ const Featureditem: React.FC<FeaturedItemProps> = ({
   content,
 }) => {
   return (
-    <div className="flex flex-col gap-4 flex-1 min-w-56">
+    <div className="flex flex-col justify-between gap-4 flex-1 min-w-56">
       <Image
         src={imageData.url as string}
         alt={imageData.alt as string}

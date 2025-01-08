@@ -15,7 +15,7 @@ const FeaturesSection = async () => {
       <div className="text-center pb-12">
         <TitleText>{title}</TitleText>
       </div>
-      <div className="flex flex-col sm:flex-row items-center gap-6 flex-wrap justify-between">
+      <div className="flex flex-col sm:flex-row gap-6 flex-wrap justify-between">
         {features.map((feature) => (
           <Featureditem
             key={feature.id}

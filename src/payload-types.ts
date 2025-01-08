@@ -33,12 +33,14 @@ export interface Config {
     hero: Hero;
     features: Feature;
     about: About;
+    contact: Contact;
   };
   globalsSelect: {
     founder: FounderSelect<false> | FounderSelect<true>;
     hero: HeroSelect<false> | HeroSelect<true>;
     features: FeaturesSelect<false> | FeaturesSelect<true>;
     about: AboutSelect<false> | AboutSelect<true>;
+    contact: ContactSelect<false> | ContactSelect<true>;
   };
   locale: null;
   user: User & {
@@ -280,6 +282,17 @@ export interface About {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact".
+ */
+export interface Contact {
+  id: number;
+  title: string;
+  content: string;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "founder_select".
  */
 export interface FounderSelect<T extends boolean = true> {
@@ -327,6 +340,17 @@ export interface FeaturesSelect<T extends boolean = true> {
  * via the `definition` "about_select".
  */
 export interface AboutSelect<T extends boolean = true> {
+  title?: T;
+  content?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact_select".
+ */
+export interface ContactSelect<T extends boolean = true> {
   title?: T;
   content?: T;
   updatedAt?: T;

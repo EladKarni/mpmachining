@@ -5,7 +5,7 @@ export const navLinkList = [
     url: "#about",
   },
   {
-    label: "Our Founder",
+    label: "Our Owner",
     style: "default",
     url: "#founder",
   },

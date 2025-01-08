@@ -15,6 +15,7 @@ import { Featured } from "./globals/Featured";
 
 import { Users } from "./collections/Users";
 import { Media } from "./collections/Media";
+import { Contact } from "./globals/Contact";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -27,7 +28,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media],
-  globals: [Founder, Hero, Featured, About],
+  globals: [Founder, Hero, Featured, About, Contact],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

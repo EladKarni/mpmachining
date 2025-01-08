@@ -8,9 +8,13 @@ import SubtitleText from "@/ui/SubtitleText";
 import TitleText from "@/ui/TitleText";
 import { useRouter } from "next/navigation";
 
-const ContactSection = () => {
-  const router = useRouter();
+type ContactSectionProps = {
+  title: string;
+  content: string;
+};
 
+const ContactSection = ({ title, content }: ContactSectionProps) => {
+  const router = useRouter();
   const handleSubmit = (event: { preventDefault: () => void; target: any }) => {
     event.preventDefault();
 
@@ -35,11 +39,8 @@ const ContactSection = () => {
       isFullWidth
     >
       <div className="flex flex-col gap-4">
-        <TitleText>Contact Us</TitleText>
-        <SubtitleText>
-          Got a technical issue? Want to send feedback about a beta feature?
-          Need details about our Business plan? Let us know.
-        </SubtitleText>
+        <TitleText>{title}</TitleText>
+        <SubtitleText>{content}</SubtitleText>
       </div>
       <form
         className="flex flex-col gap-4"
